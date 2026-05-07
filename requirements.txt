@@ -5,3 +5,5 @@ seaborn
 matplotlib
 dill
 scikit-learn
+xgboost
+sentence-transformers

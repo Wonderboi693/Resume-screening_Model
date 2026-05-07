@@ -8,6 +8,7 @@ from dataclasses import dataclass
 
 import pandas as pd
 import numpy as np
+from sentence_transformers import SentenceTransformer
 from sklearn.utils import resample
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
@@ -61,7 +62,6 @@ class DataTransformation:
             return preprocessor
         except Exception as e:
             raise CustomException(e, sys)
-        
     def balance_data(self, df):
         '''
         Balances the Gender Bias: Downsamples successful Male matches to match the count of successful Female matches.
